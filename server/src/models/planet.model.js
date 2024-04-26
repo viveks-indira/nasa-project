@@ -1,8 +1,7 @@
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const path = require("path");
-const planets = require("./planet.mongo");
-// const { log } = require("console");
+const planets = require("./planet.mongo"); 
 
 function isHabitatable(planet) {
   return (

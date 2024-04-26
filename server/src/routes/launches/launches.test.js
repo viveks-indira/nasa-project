@@ -63,7 +63,7 @@ describe("Launches API", () => {
         .expect(400);
 
       expect(response.body).toStrictEqual({
-        error: "Some fields are not given",
+        "error": "Missing required launch property",
       });
     });
 
