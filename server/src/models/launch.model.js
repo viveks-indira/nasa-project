@@ -129,7 +129,7 @@ async function scheduleNewLaunch(launch) {
   const newLaunch = Object.assign(launch, {
     success: true,
     upcoming: true,
-    customerscustomers: ["Zero", "NASA"],
+    customers: ["Zero to Mastery", "NASA"],
     flightNumber: newFlightNumber,
   });
   await saveLaunch(newLaunch);
@@ -145,7 +145,7 @@ async function abortLaunchById(launchId) {
       success: false,
     }
   );
-  return aborted.modifiedCount === 1;
+  return aborted.modifiedCount === 1 ? 1 : 0;
 }
 
 module.exports = {

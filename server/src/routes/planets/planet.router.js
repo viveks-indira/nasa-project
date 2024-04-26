@@ -1,5 +1,6 @@
 const express = require("express");
-const { httpGetAllPlanets } = require("./planet.controller");
+const { httpGetAllPlanets } = 
+require("../../controllers/planetsController");
 
 const route = express.Router();
 

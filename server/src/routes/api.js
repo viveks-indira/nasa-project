@@ -1,10 +1,12 @@
 const express = require('express');
-const pRouter = require("../routes/planets/planet.router");
-const lRouter = require("../routes/launches/launches.router");
+const planetsRouter = 
+require("../routes/planets/planet.router");
+const launchesRouter = 
+require("../routes/launches/launches.router");
 
 const api = express.Router();
 
-api.use(pRouter);
-api.use(lRouter);
+api.use(planetsRouter);
+api.use(launchesRouter);
 
 module.exports = api;
