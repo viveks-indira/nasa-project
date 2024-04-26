@@ -24,7 +24,7 @@ jobs:
         uses: supercharge/mongodb-github-action@1.10.0
         with:
           node-version: ${{ matrix.mongodb-version }}
-      - run: npm vivek
+      - run: npm install
       - run: npm run build --prefix client
       - run: npm test
         timeout-minutes: 1
