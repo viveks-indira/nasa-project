@@ -1,7 +1,7 @@
 const request = require("supertest");
 const app = require("../../app");
 const { mongoDisconnect, mongoConnect } = require("../../services/mongo");
-const { allPlanetData} = require('../../models/planet.model');
+const { allPlanetData } = require("../../models/planet.model");
 
 describe("Launches API", () => {
   beforeAll(async () => {
@@ -9,9 +9,9 @@ describe("Launches API", () => {
     await allPlanetData();
   });
 
-  afterAll(async ()=>{
+  afterAll(async () => {
     await mongoDisconnect();
-  })
+  });
   describe("Test GET /launches", () => {
     test("it should respnd with 200 success", async () => {
       const response = await request(app)
@@ -63,7 +63,7 @@ describe("Launches API", () => {
         .expect(400);
 
       expect(response.body).toStrictEqual({
-        "error": "Missing required launch property",
+        error: "Missing required launch property",
       });
     });
 
